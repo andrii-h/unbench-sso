@@ -1,16 +1,3 @@
-SmoothScroll({
-  animationTime: 800,
-  stepSize: 75,
-  accelerationDelta: 30,
-  accelerationMax: 2,
-  keyboardSupport: true,
-  arrowScroll: 50,
-  pulseAlgorithm: true,
-  pulseScale: 4,
-  pulseNormalize: 1,
-  touchpadSupport: true,
-})
-
 let data
 const iframe = document.createElement('iframe')
 iframe.id = 'inlineFrameExample'
@@ -72,7 +59,7 @@ window.onload = () => {
     switch (payload.method) {
       case 'get':
         data = payload
-        if (document.readyState != 'complete') {
+        if (document.readyState !== 'complete') {
           document.addEventListener('DOMContentLoaded', appendAccount)
         } else {
           if (!payload['data']) {
@@ -120,7 +107,7 @@ const appendAccount = () => {
   mobileMenuBtn.style.flexGrow = 1
   mobileMenuBtn.innerHTML = `
        <a href="https://platform.unbench.us/account" target="_self" class="account-btn btn flex-hor w-inline-block" style="justify-content: center">
-         <img src="images/Profile-white.svg" loading="lazy" alt="" class="profile-icon">
+         <img src="https://cdn.jsdelivr.net/gh/andrii-h/unbench-sso/img/Profile-white.svg" loading="lazy" alt="" class="profile-icon">
          <div class="subtitle white-text">Account</div>
        </a>
      `
@@ -141,22 +128,22 @@ ${btn}
            </div>
          </li>
          <li class="account-btn-sublist-item">
-           <a href="https://platform.unbench.us/requests"><img src="images/account-btn-req.svg" loading="lazy" alt="" class="profile-icon">Requests</a>
+           <a href="https://platform.unbench.us/requests"><img src="https://cdn.jsdelivr.net/gh/andrii-h/unbench-sso/img/account-btn-req.svg" loading="lazy" alt="" class="profile-icon">Requests</a>
          </li>
          <li class="account-btn-sublist-item">
-           <a href="https://platform.unbench.us/companies"><img src="images/account-btn-companies.svg" loading="lazy" alt="" class="profile-icon">Companies</a>
+           <a href="https://platform.unbench.us/companies"><img src="https://cdn.jsdelivr.net/gh/andrii-h/unbench-sso/img/account-btn-companies.svg" loading="lazy" alt="" class="profile-icon">Companies</a>
          </li>
          <li class="account-btn-sublist-item">
-           <a href="https://platform.unbench.us/account"><img src="images/account-btn-personal.svg" loading="lazy" alt="" class="profile-icon">Personal Area</a>
+           <a href="https://platform.unbench.us/account"><img src="https://cdn.jsdelivr.net/gh/andrii-h/unbench-sso/img/account-btn-personal.svg" loading="lazy" alt="" class="profile-icon">Personal Area</a>
          </li>
          <li class="account-btn-sublist-item">
-           <a href="https://platform.unbench.us/developers"><img src="images/account-btn-bench.svg" loading="lazy" alt="" class="profile-icon">Bench</a>
+           <a href="https://platform.unbench.us/developers"><img src="https://cdn.jsdelivr.net/gh/andrii-h/unbench-sso/img/account-btn-bench.svg" loading="lazy" alt="" class="profile-icon">Bench</a>
          </li>
          <li class="account-btn-sublist-item">
-           <a href="https://platform.unbench.us/chat"><img src="images/account-btn-chat.svg" loading="lazy" alt="" class="profile-icon">Chat</a>
+           <a href="https://platform.unbench.us/chat"><img src="https://cdn.jsdelivr.net/gh/andrii-h/unbench-sso/img/account-btn-chat.svg" loading="lazy" alt="" class="profile-icon">Chat</a>
          </li>
          <li class="account-btn-sublist-item">
-           <a href="#" onclick="removeToken()"><img src="images/account-btn-logout.svg" loading="lazy" alt="" class="profile-icon">Log out</a>
+           <a href="#" onclick="removeToken()"><img src="https://cdn.jsdelivr.net/gh/andrii-h/unbench-sso/img/account-btn-logout.svg" loading="lazy" alt="" class="profile-icon">Log out</a>
          </li>
        </ul>
      `
