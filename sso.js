@@ -88,7 +88,9 @@ if (window.innerWidth > 768) {
     cross.removeData('token')
     window.open('https://platform.unbench.us/signin', '_self')
   }
-
+  
+  window.removeToken = removeToken
+  
   const appendAccount = () => {
 
     document.querySelectorAll('.sign-up').forEach(i => i.remove())
