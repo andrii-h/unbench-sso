@@ -56,7 +56,6 @@ if (window.innerWidth > 768) {
   let cross
 
   window.onload = () => {
-    console.log('Uploaded SSO.js')
     const onMessage = (payload) => {
       switch (payload.method) {
         case 'get':
@@ -88,12 +87,13 @@ if (window.innerWidth > 768) {
     cross.removeData('token')
     window.open('https://platform.unbench.us/signin', '_self')
   }
-  
+
   window.removeToken = removeToken
-  
+
   const appendAccount = () => {
 
-    document.querySelectorAll('.sign-up').forEach(i => i.remove())
+    document.querySelectorAll('.button.white.w-inline-block').
+      forEach(i => i.remove())
     document.querySelector('.hero-btn-wrapper').remove()
 
     document.querySelectorAll('.log-in').forEach(i => {
