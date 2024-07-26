@@ -97,7 +97,7 @@ if (window.innerWidth > 768) {
     document.querySelector('.hero-btn-wrapper').remove()
 
     document.querySelectorAll('.log-in').forEach(i => {
-      i.querySelector('.subtitle').innerHTML = 'Account'
+      i.querySelector('.text-btn').innerHTML = 'Account'
       i.classList.add('account-btn')
       i.href = 'https://platform.unbench.us/account'
     })
